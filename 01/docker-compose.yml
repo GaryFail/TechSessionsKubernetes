@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  platform:
+    build:
+      context: ./Platform
+    expose:
+      - "80"
+  message-generator:
+    build:
+      context: ./MessageGenerator
+    ports:
+      - 2244:80
