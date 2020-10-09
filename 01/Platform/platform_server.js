@@ -11,7 +11,7 @@ app.get('/', (req, res) => {
 
     axios.get('http://message-generator/')
         .then(function(response){
-            console.log(`Response: ${response.data}`);
+            console.log(`Response: ${JSON.stringify(response.data)}`);
             message = response.data;
         })
         .catch(function(error){
