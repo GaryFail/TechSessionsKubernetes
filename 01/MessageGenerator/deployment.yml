@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: message-generator
+  labels:
+    app: message-generator
+spec:
+  selector:
+    matchLabels:
+      app: message-generator
+  template:
+    metadata:
+      labels:
+        app: message-generator
+    spec:
+      containers:
+      - name: message-generator
+        image: garyfail/message-generator
+        imagePullPolicy: IfNotPresent

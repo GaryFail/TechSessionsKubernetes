@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: message-generator
+  labels:
+    app: message-generator
+spec:
+  containers:
+    - name: message-generator
+      image: garyfail/message-generator
+      imagePullPolicy: IfNotPresent
